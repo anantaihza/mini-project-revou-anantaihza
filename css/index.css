@@ -32,13 +32,14 @@ body {
 
 /* Navbar */
 header {
-    background-color:#ffffff;
+    background-color: #ffffff;
     border-bottom: 0.3px solid #d5d5d5;
-    
+
     padding: 6px 20px;
 }
 
 header .wrapper {
+    
     max-width: 80vw;
     margin: 0 auto;
     display: flex;
@@ -186,27 +187,140 @@ header .logo img {
     text-align: center;
 }
 
-.title, .title-contact{
+.title,
+.title-contact {
     color: #3D4753;
 }
-.sub-title, .sub-title-contact {
-    color:  #8391A5;
+
+.sub-title,
+.sub-title-contact {
+    color: #8391A5;
 }
 
-.title{
+.title {
     font-size: xx-large;
     margin-bottom: 0;
 }
+
 .sub-title {
     font-size: larger;
 }
 
 .section-1 {
-display: flex;
+    display: flex;
+    align-items: flex-start;
 }
 
 .form-section {
     background-color: #EEF0F4;
     width: 30vw;
-    padding: 1.5vw 2.5vw;
+    padding: 1.5vw 3.5vw;
+    border-radius: 8px;
+}
+
+.form-section form label {
+    color: #3D4753;
+    font-weight: 600;
+    font-size: medium;
+}
+
+input[type=text],
+input[type=email],
+input[name=interested] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #CBD3DC;
+    border-radius: 6px;
+}
+
+::placeholder {
+    color: #CBD3DC;
+    opacity: 1;
+    /* Firefox */
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #CBD3DC;
+}
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #CBD3DC;
+}
+
+button.send {
+    width: 26vw;
+    max-width: 100%;
+    padding: 10px 10px;
+    background-color: #3D4753;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.img-banner {
+    border-radius: 12px;
+}
+.user-review {
+    max-width: 100%;
+    width: 80%;
+    margin: 10px 20px;
+}
+.quotes-banner {
+    color: #8391A5;
+}
+.profile-user-img {
+    margin: auto 5px;
+    border-radius: 50%;
+    width: 5vw;
+    justify-content: center;
+}
+.profile-user {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+.profile-user-desc {
+    margin: auto 2px;
+}
+.name-user {
+    margin: 0;
+    font-weight: 600;
+    color: #3D4753;
+}
+.desc-user {
+    margin: 0;
+    color: #8391A5;
+}
+.line-1 {
+    width: 8vw;
+    height: 5px;
+    background-color: #EEF0F4;
+    border: none;
+}
+.feature-header {
+    font-weight: 600;
+    color: #3D4753;
+}
+.feature-point {
+    display: flex;
+    align-items: center;
+    width: 25vw;
+}
+.feature-num {
+    font-weight: 600;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0 23px;
+    background-color: #EEF0F4;
+}
+.feature-num p {
+    color: #A2AFBF;
+}
+.feature-desc {
+    color: #8391A5;
+    margin: 0 0 0 20px;
+    
 }
