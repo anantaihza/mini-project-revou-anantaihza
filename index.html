@@ -41,11 +41,43 @@
 
       <div class="container section-1">
         <div class="img-section">
-          <img
-            class="img-banner"
-            src="assets/img/banner-img.jpg"
-            alt="image"
-          />
+          <div class="autoslide">
+            <div class="slideshow-container">
+              <div class="slide-content fade">
+                <img
+                  class="img-banner"
+                  src="assets/img/banner-img.jpg"
+                  alt="image"
+                />
+              </div>
+
+              <div class="mySlides fade">
+                <img
+                  class="img-banner"
+                  src="assets/img/banner-img.jpg"
+                  alt="image"
+                />
+              </div>
+
+              <div class="mySlides fade">
+                <img
+                  class="img-banner"
+                  src="assets/img/banner-img.jpg"
+                  alt="image"
+                />
+              </div>
+              <br />
+              <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br />
+          </div>
 
           <div class="user-review">
             <p class="quotes-banner">
@@ -112,6 +144,7 @@
             </div>
           </div>
         </div>
+        <div class="separator"></div>
         <div class="form-section">
           <h2 class="title-contact">Contact Us</h2>
           <p class="sub-title-contact">
@@ -119,30 +152,30 @@
           </p>
           <br />
 
-          <form>
-            <label for="name">Your Name:</label>
+          <form name="form-contact-us" action="index.html" onsubmit="formValidate()" method="post">
+            <label for="fname">Your Name:</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="fname"
+              name="fname"
               placeholder="First and last name"
             />
             <br /><br />
 
-            <label for="email">Email Address:</label>
+            <label for="femail">Email Address:</label>
             <input
               type="email"
-              id="email"
-              name="email"
+              id="femail"
+              name="femail"
               placeholder="example@email.com"
             />
             <br /><br />
 
-            <label for="interested">What are you interested in?</label>
+            <label for="finterested">What are you interested in?</label>
             <input
               list="interest"
-              id="interested"
-              name="interested"
+              id="finterested"
+              name="finterested"
               placeholder="Select Option"
             />
             <datalist id="interest">
@@ -238,28 +271,32 @@
         </div>
       </div>
     </section>
-    <hr class="divide">
+    <hr class="divide" />
     <section class="part-3" id="part-3">
-        <div class="container">
-            <h2>Your Closing Argument Headline</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae iste, quasi maxime possimus architecto, ab natus accusamus quo tempora culpa reprehenderit labore at, soluta officiis deleniti atque. Magni, repudiandae porro</p>
-            <button class="button-call">CALL TO ACTION</button>
-        </div>
+      <div class="container">
+        <h2>Your Closing Argument Headline</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
+          iste, quasi maxime possimus architecto, ab natus accusamus quo tempora
+          culpa reprehenderit labore at, soluta officiis deleniti atque. Magni,
+          repudiandae porro
+        </p>
+        <button class="button-call">CALL TO ACTION</button>
+      </div>
     </section>
-    <hr class="divide">
+    <hr class="divide" />
     <footer>
-        <div class="container">
-            <img src="assets/logo/logo.png" alt="moqups" width="13%">
-            <div class="foo-nav">
-                <a href="">Terms of Service</a>
-                &nbsp;&nbsp;
-                <a href="">Privacy Policy</a>
-            </div>
-            <div class="copyright">
-                <p><span>&copy;2019</span> &nbsp;&nbsp;<span>Moqups</span></p>
-            </div>
+      <div class="container">
+        <img src="assets/logo/logo.png" alt="moqups" width="13%" />
+        <div class="foo-nav">
+          <a href="">Terms of Service</a>
+          &nbsp;&nbsp;
+          <a href="">Privacy Policy</a>
         </div>
-        
+        <div class="copyright">
+          <p><span>&copy;2019</span> &nbsp;&nbsp;<span>Moqups</span></p>
+        </div>
+      </div>
     </footer>
 
     <script src="javascript/index.js"></script>
