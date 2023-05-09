@@ -87,7 +87,6 @@ header .logo img {
   font-size: 28px;
 }
 
-/* edit jelek */
 .navbar ul a:hover {
   color: #111111;
   text-decoration: underline;
@@ -146,27 +145,7 @@ header .logo img {
   border-color: #222222;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    all: unset;
-    display: block;
-  }
-
-  .navbar ul {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .navbar ul a {
-    font-size: inherit;
-  }
-
-  .close-nav,
-  .menu-bar {
-    display: none;
-  }
-}
-
+/* part 1 */
 .title-group {
   text-align: center;
 }
@@ -190,9 +169,19 @@ header .logo img {
   font-size: larger;
 }
 
+/* flexbox section-1 */
 .section-1 {
   display: flex;
   align-items: flex-start;
+}
+.img-section img {
+  width: 85%;
+}
+.img-section .feature p {
+  width: 100%;
+}
+.section-1 .user-review {
+  margin-right: 0;
 }
 
 .form-section {
@@ -302,7 +291,10 @@ button.send {
 }
 .feature-num p,
 .item-fresh-info p,
-.item-kitchen-info p {
+.item-kitchen-info p,
+.part-3 p,
+footer a,
+footer p {
   color: #a2afbf;
 }
 .feature-desc {
@@ -312,7 +304,7 @@ button.send {
 
 /* section 2 */
 .part-2 {
-    padding-bottom: 10vh;
+  padding-bottom: 10vh;
 }
 
 .head-title-pakage {
@@ -325,12 +317,14 @@ button.send {
   font-size: xx-large;
   padding-top: 10vh;
 }
-.fresh-section, .kitchen-section {
+.fresh-section,
+.kitchen-section {
   margin-top: 3vh;
   display: flex;
   justify-content: space-between;
 }
-.item-fresh, .item-kitchen {
+.item-fresh,
+.item-kitchen {
   display: flex;
   align-items: flex-start;
   width: 25vw;
@@ -349,21 +343,102 @@ button.send {
 
 /* section 3 */
 .part-3 {
-    text-align: center;
+  text-align: center;
+}
+
+.part-3 h2 {
+  font-size: 3vw;
+}
+.part-3 p {
+  margin: 20px 30px;
 }
 .button-call {
-    border-radius: 6px;
-    background-color: #3d4753;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+  border-radius: 6px;
+  background-color: #3d4753;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 2px;
+  cursor: pointer;
+}
+.divide {
+  height: 2px;
+  background-color: #eef0f4;
+  border: none;
+}
+
+footer {
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+}
+
+/* responsive mobile */
+@media (min-width: 768px) {
+  .navbar {
+    all: unset;
+    display: block;
   }
-  footer {
-    text-align: center;
+
+  .navbar ul {
+    flex-direction: row;
+    gap: 20px;
   }
+
+  .navbar ul a {
+    font-size: inherit;
+  }
+
+  .close-nav,
+  .menu-bar {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  /* part-1 */
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .img-section img {
+    width: 100%;
+  }
+  /* .img-section .feature p {
+    width: 120%;
+} */
+  .section-1 .img-section .user-review {
+    margin: 0;
+    width: 100%;
+  }
+  .feature-point {
+    width: 100%;
+  }
+.form-section {
+    margin-top: 10vw;
+    width: 100%;
+}  
+
+  /* part-2 */
+  .fresh-section,
+  .kitchen-section {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .item-fresh, .item-kitchen {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Part 3 */
+  .part-3 h2 {
+    font-size: xx-large;
+  }
+}
